@@ -1,3 +1,19 @@
+// add serviceworker eventlistener here
+// implimenter a service worker boilerplate from https://developers.google.com/web/fundamentals/primers/service-workers/registration
+
+if(`serviceWorker` in navigator){
+  window.addEventListener(`load`, () => {
+    navigator.serviceWorker.register(`./service-worker.js`)
+    .then((yup) => {
+      console.log(`you've been connected to `, yup)
+    })
+  })
+}
+
+
+
+
+
 let transactions = [];
 let myChart;
 
